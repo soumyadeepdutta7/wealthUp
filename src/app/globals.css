@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wealthup-blue-dark: #294F7C;
+  --color-wealthup-blue-light: #4B90E2;
+  --color-wealthup-red: #FF6969;
+  --color-wealthup-orange: #FFBC70;
+  --color-wealthup-green: #7EFF7E;
+
+  --background-image-wealthup-meter: linear-gradient(90deg, #FF6969 0%, #FF6969 12.58%, #FFBC70 25.48%, #FFBC70 53.97%, #7EFF7E 65%, #7EFF7E 94.23%);
+  --background-image-wealthup-button: linear-gradient(90deg, #294F7C 0%, #4B90E2 100%);
+  --background-image-wealthup-gauge: linear-gradient(32.22deg, #FF6969 30.67%, #FF6969 73.68%, #FFBC70 117.79%, #FFBC70 215.2%, #7EFF7E 252.91%, #7EFF7E 352.85%);
+
+  --font-urbanist: var(--font-urbanist);
+  --font-inter: var(--font-inter);
+}
+
+:root {
+  --background: #F4F8FB;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-urbanist), 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .border-gauge {
+    border: 27px solid;
+    border-image-source: var(--background-image-wealthup-gauge);
+    border-image-slice: 1;
+  }
+
+  .text-urbanist-regular {
+    font-family: var(--font-urbanist);
+    font-weight: 400;
+  }
+
+  .text-urbanist-bold {
+    font-family: var(--font-urbanist);
+    font-weight: 700;
+  }
+}
